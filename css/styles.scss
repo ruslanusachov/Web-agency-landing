@@ -74,8 +74,6 @@ html, body{
   }
 
   .section1__frames {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 30px;
     display: flex;
     flex-direction: row;
@@ -84,8 +82,7 @@ html, body{
 
     .section1__frame {
       position: relative;
-      max-width: 280px;
-      width: 100%;
+      width: 280px;
       height: 130px;
       color: #fff;
       display: flex;
@@ -267,9 +264,10 @@ html, body{
     }
 
     .section4__links {
+      width: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       margin-top: 20px;
 
       .section4__btn {
@@ -354,20 +352,57 @@ html, body{
       width: 315px;
       height: auto;
     }
-    .section5__developmentHeading{
-      @include section1__text;
-      z-index: 4;
-      position: relative;
-      bottom:150px;
-      right: 40px;
-      font-family: Parangon_530C;
-      font-stretch: ultra-expanded;
-      font-weight: bold;
-      letter-spacing: 2px;
+   
+
+      .section5__developmentHeading{
+        @include section1__text;
+        z-index: 4;
+        position: relative;
+        bottom:150px;
+        right: 40px;
+        font-family: Parangon_530C;
+        font-stretch: ultra-expanded;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+         
+    }
+  .section5__servicesWrapper{
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+    z-index: 5;
+    .section5__item{
+      width: 300px;
+      height: 200px;
+      background-image: url(../img/landing_page.png);
+      background-size: cover;
+      background-position: center, center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      .section5__links{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .section5__btnLink{
+          border: 2px, solid, #00b9e7;
+          padding: 20px, 10px;
+
+        }
+        .section5__arrow{
+          width: 30px;
+        }
+      }
+
     }
   }
-
-
 }
 
 .section5:after {
