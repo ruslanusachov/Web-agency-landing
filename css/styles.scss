@@ -500,3 +500,35 @@ html, body{
   background: rgba($color: #473d55, $alpha: .7);
   z-index: 2;
 }
+.section6{
+  position: relative;
+  top: 550px;
+  background-image: url(../img/beTheFirst.png);
+  background-position-y: 30px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .section6__textSection{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 40px;
+    .section6__heading{
+      font-size: 35px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .section6__text{
+      margin-top: 25px;
+    }
+  }
+  .section6__partners{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section6__partner{
+      margin-bottom: 20px;
+    }
+  }
+}
