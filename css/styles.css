@@ -494,3 +494,86 @@
 .section6 .section6__partners .section6__partner {
   margin-bottom: 20px;
 }
+
+.section7 {
+  position: relative;
+  top: 600px;
+}
+.section7 .section7__top {
+  width: 100%;
+  height: 120px;
+  background-color: #303263;
+  background-image: url(../img/ourProjects.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section7 .section7__top .section7__heading {
+  color: #fff;
+  font-stretch: extra-expanded;
+  font-weight: bold;
+  font-size: 40px;
+}
+.section7 .section7__gallery {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.section7 .section7__gallery .section7__topRow {
+  width: 100%;
+  margin: 0;
+}
+.section7 .section7__gallery .section7__topRow .section7__link {
+  max-width: 700px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.section7 .section7__gallery .section7__topRow .section7__link .section7__img {
+  max-width: 700px;
+  width: 100%;
+  max-height: 460px;
+  height: 100%;
+  vertical-align: top;
+}
+.section7 .section7__gallery .section7__bottomRow {
+  width: 100%;
+  margin: 0;
+}
+.section7 .section7__gallery .section7__bottomRow .section7__link {
+  max-width: 420px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.section7 .section7__gallery .section7__bottomRow .section7__link .section7__img {
+  max-width: 4200px;
+  width: 100%;
+  max-height: 340px;
+  height: 100%;
+  vertical-align: top;
+}
+.section7 .section7__bottom {
+  width: 100%;
+  height: 80px;
+  background-color: #303263;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section7 .section7__bottom .section7__btn {
+  background-color: #6a6b8e;
+}
+.section7 .section7__bottom .section7__btn .section7__btnText {
+  color: #fff;
+  font-weight: bold;
+}
+.section7 .section7__bottom .section7__btn:hover {
+  background-color: #fff;
+}
+.section7 .section7__bottom .section7__btn:hover .section7__btnText {
+  color: #6a6b8e;
+  font-weight: bold;
+}
