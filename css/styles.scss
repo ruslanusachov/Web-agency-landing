@@ -21,6 +21,7 @@ html, body{
     overflow-x: hidden;
   }
 }
+
 .section1__frame {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
@@ -603,6 +604,7 @@ html, body{
     align-items: center;
     .section7__btn{
       background-color: #6a6b8e;
+      border-color: #6a6b8e;
       .section7__btnText{
         color:#fff;
         font-weight: bold;
@@ -617,4 +619,66 @@ html, body{
     }
   }
   
+}
+
+.section8{
+  position: relative;
+  top: 800px;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  display: flex;
+
+  align-items: center;
+  .section8__textSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-image: url(../img/adaptate.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    .section8__heading{
+      font-size: 35px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-stretch: extra-expanded;
+      margin-top: 5px;
+      margin-right: 15px;
+    }
+    .section8__text {
+      max-width: 335px;
+      width: 100%;
+      margin-top: 40px;
+      margin-left: 25px;
+      line-height: 1.5;
+    }
+  }
+  .section8__imgSection{
+    @media screen and(max-width: 1163px){
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    bottom: 100px;
+    .section8__iphone{
+      max-height: 230px;
+      height: 100%;
+    }
+    .section8__ipad{
+      max-width: 250px;
+      width: 100%;
+      max-height: 350px;
+      height: 100%;
+    }
+    .section8__macbook{
+      max-width: 150px;
+      width: 100%;
+      max-height: 430px;
+      height: 100%;
+    }
+  }
 }
