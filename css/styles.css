@@ -659,14 +659,23 @@
   z-index: 2;
   font-size: 40px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .section9 .section9__textSection {
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .section9 .section9__textSection .section9__subheadingSection {
   display: flex;
   flex-direction: row;
   justify-content: start;
+  margin-bottom: 20px;
+}
+.section9 .section9__textSection .section9__subheadingSection .section9__subheading {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .section9 .section9__textSection .section9__subheadingSection .section9__icon {
   width: 50px;
@@ -675,9 +684,16 @@
 .section9 .section9__textSection #section9__icon2 {
   margin-top: -10px;
 }
+.section9 .section9__textItem {
+  max-width: 360px;
+  width: 100%;
+}
+.section9 #section9__textItem2 {
+  max-width: 330px;
+  width: 100%;
+}
 .section9 .section9__btn {
   background-color: #f6ae48;
-  font-size: 18px;
   color: #fff;
   border-radius: 10px;
   font-weight: bold;
@@ -685,6 +701,7 @@
   height: 50px;
   border: none;
   z-index: 2;
+  text-transform: uppercase;
 }
 .section9 .section9__btn:hover {
   background-color: #fff;
