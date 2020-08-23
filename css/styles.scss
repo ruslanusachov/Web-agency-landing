@@ -682,3 +682,67 @@ html, body{
     }
   }
 }
+
+.section9{
+  position: relative;
+  top: 800px;
+  background-image: url(../img/trade-in.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  .section9__heading{
+    z-index: 2;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .section9__textSection{
+    z-index: 2;
+    .section9__subheadingSection{
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      // align-items: flex-end;
+      .section9__icon{
+        width: 50px;
+        margin-right: 30px;
+      }
+      
+    }
+    #section9__icon2{
+      margin-top: -10px;
+    }
+  }
+  .section9__btn{
+    background-color: #f6ae48;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    border: none;
+    z-index: 2;
+  }
+  .section9__btn:hover{
+    background-color: #fff;
+    color: #f6ae48;
+    z-index: 2;
+    
+  }
+}
+.section9:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height:100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color: #473d55, $alpha: .8);
+}
