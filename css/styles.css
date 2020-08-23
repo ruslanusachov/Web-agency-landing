@@ -702,11 +702,15 @@
   border: none;
   z-index: 2;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .section9 .section9__btn:hover {
   background-color: #fff;
   color: #f6ae48;
   z-index: 2;
+  text-decoration: none;
 }
 
 .section9:after {
@@ -719,4 +723,45 @@
   right: 0;
   bottom: 0;
   background: rgba(71, 61, 85, 0.8);
+}
+
+.section10 {
+  position: relative;
+  top: 800px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.section10 .section10__textSection {
+  background-image: url(../img/be-careful.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.section10 .section10__textSection .section10__textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.section10 .section10__textSection .section10__subheading {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.section10 .section10__textSection .section10__text {
+  margin-top: 20px;
+  line-height: 1.5;
+  max-width: 350px;
+  width: 100%;
+}
+.section10 .section10__img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
