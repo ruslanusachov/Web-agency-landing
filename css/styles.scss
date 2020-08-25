@@ -16,6 +16,7 @@
 }
 
 html, body{
+
   @media screen and(max-width: 400px){
     width: 100%;
     overflow-x: hidden;
@@ -807,5 +808,92 @@ html, body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    max-width: 480px;
+    width: 100%;
   }
+}
+
+.section11{
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  position: relative;
+  top: 1000px;
+  height: 600px;
+  width: 100%;
+  background-image: url(../img/footerbg.png);
+  background-size: cover;
+  background-position: center center;
+  overflow-x: hidden;
+  .section11__textSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    .section11__textWrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 330px;
+      width: 100%;
+      color: #fff;
+    }
+
+  }
+  .section11__formWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    .input::placeholder{
+      color: #fff;
+    }
+    .input{
+      padding-left: 20px;
+      background: transparent;
+      border:  solid 2px #fff;
+      margin-left: -3px;
+    }
+    .firstname{
+      color: #fff;
+      width: 300px;
+      height: 50px;
+
+    }
+    .lastname{
+      width: 300px;
+      height: 50px;
+      margin-left: -3px;
+    }
+    .email{
+      width: 202%;
+      margin-top: -4px;
+      height: 50px;
+    }
+    .message{
+      width: 202%;
+      margin-top: -4px;
+      height: 200px;
+    }
+  }
+}
+
+.section11:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height:600px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color: #473d55, $alpha: .8);
+}
+.footer__underline{
+  position: relative;
+  top: 1000px;
+  height: 70px;
+  width: 100%;
+  background-color: #f6ae48;
 }
