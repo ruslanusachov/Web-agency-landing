@@ -20,9 +20,11 @@ html, body{
     width: 100%;
     overflow-x: hidden;
   }
-  .main-wrapper{
-    overflow: hidden;
-  }
+
+  
+}
+.main-wrapper{
+  overflow: hidden;
 }
 
 .section1__frame {
@@ -96,7 +98,7 @@ html, body{
       margin-right: 0;
       margin-left: 0;
       margin-top: 10px;
-    }
+      }
     margin-top: 30px;
     display: flex;
     flex-direction: row;
@@ -152,8 +154,7 @@ html, body{
 
 }
 
- .section1:after {
-   content: '';
+.section1__overlay{
    display: flex;
    position: absolute;
    width: 100%;
@@ -182,7 +183,9 @@ html, body{
 }
 
 .section2 {
-  position: relative;
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
   .section2__nav-container{
     width: 100%;
     padding-top: 50px;
@@ -196,6 +199,7 @@ html, body{
       .section2__nav{
         display: flex;
         padding-right: 30px;
+        z-index: 1;
 
         .nav__item{
           list-style-type: none;
@@ -231,6 +235,7 @@ html, body{
         margin-top: 22px;
         display: flex;
         justify-content: center;
+        z-index: 2;
         @media screen and(min-width: 1024px){
           display: none;
         }
@@ -241,7 +246,6 @@ html, body{
       height: 5px;
       border-radius: 3px;
       background-color: #f6ae48;
-      z-index: 1;
     }
     
     .menu-icon-line::before {
@@ -288,6 +292,7 @@ html, body{
   .section2__mobile-nav{
     display: block;
     position: absolute;
+    z-index: 1;
     right: -350px;
     top: 0;
     height: 100vh;
@@ -295,10 +300,11 @@ html, body{
     padding: 50px;
     transition: transform 0.2s ease-in;
     background-color: rgba(82, 79, 79, 0.850);
+    
     .section2__mobileNav-title{
       font-size: 28px;
       font-weight: 800;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       color: rgb(231, 231, 231);
     }
     .mobile-nav__list{
