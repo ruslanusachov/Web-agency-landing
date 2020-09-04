@@ -58,6 +58,7 @@ html, body{
   .section1__text-section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: auto;
     .section1__heading {
@@ -156,7 +157,7 @@ html, body{
 
 .section1__overlay{
    display: flex;
-   position: absolute;
+   position: relative;
    width: 100%;
    height: 100vh;
    top: 0;
@@ -167,7 +168,8 @@ html, body{
    z-index: 2;
    margin-right: 0;
    margin-left: 0;
-   overflow: auto;
+   overflow: hidden;
+
  }
 
 
@@ -350,13 +352,27 @@ html, body{
 
 .section3 {
   .section3__we {
+    @media screen and(max-width: 991px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
     height: 600px;
     background-image: url(../img/we.png);
     background-position: 50% 60%;
     background-size: 580px auto;
     background-repeat: no-repeat;
+    
+    @media screen and(max-width: 601px) {
+      background-size: 90% auto;      
+    }
+    
 
     .section3__studioWrapper {
+      margin-left: 0;
+      margin-right: 0;
       display: flex;
       align-items: center;
 
@@ -367,10 +383,18 @@ html, body{
     }
 
     .section3__textWrapper {
+      @media screen and(max-width: 991px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
       display: flex;
       align-items: center;
 
       .section3__text {
+        @media screen and(max-width: 601px) {
+          margin-left: 20px;
+        }
         max-width: 710px;
         width: 100%;
         font-family: PtSans;
@@ -394,6 +418,10 @@ html, body{
     align-items: start;
 
     .section4__item {
+      @media screen and (max-width: 991px){
+        align-items: center;
+
+      }
       max-width: 400px;
       padding: 15px;
       display: flex;
@@ -414,6 +442,9 @@ html, body{
       }
 
       .section4__text {
+        @media screen and(max-width: 830px){
+          padding-left: 20px;
+        }
         font-size: 14px;
         margin-top: 20px;
       }
@@ -423,6 +454,9 @@ html, body{
     }
 
     #support {
+      @media screen and(max-width: 446px){
+        margin-left: 35px;
+      }
       background-color: #f6ae48;
       color: #fff;
       font-size: 14px;
@@ -451,6 +485,7 @@ html, body{
         text-decoration: none;
         background-color: white;
         color: #f6ae48;
+        font-weight: 600;
       }
 
       .section4__arrowLink {
@@ -468,6 +503,10 @@ html, body{
 
 
 .section5{
+  @media screen and(max-width: 991px) {
+    top: 100px;
+    justify-content: center;
+  }
   position: relative;
   top: 255px;
   width: 100%;
@@ -482,6 +521,10 @@ html, body{
 
 
   .section5__heading{
+    @media screen and(max-width: 453px){
+      font-size: 25px;
+      top: 50px;
+    }
     @include section1__text;
     position: relative;
     top: 120px;
@@ -495,6 +538,10 @@ html, body{
 }
 
 .section5__text {
+  @media screen and(max-width: 453px){
+    top: 50px;
+    font-size: 16px;
+  }
   @include section1__text;
   position: relative;
   top: 130px;
@@ -513,23 +560,25 @@ html, body{
     background-image: url(../img/development.png);
     align-self: flex-start;
     z-index: 3;
-    .section5__gears{
-      width: 160px;
-      height: auto;
-    }
-    .section5__gear{
-      width: 435px;
-      height: auto;
-      position: relative;
-    }
+    // .section5__gears{
+    //   width: 160px;
+    //   height: auto;
+    // }
+    // .section5__gear{
+    //   width: 435px;
+    //   height: auto;
+    //   position: relative;
+    // }
    
 
-      .section5__developmentHeading{
+      .section5__subheading{
+        @media screen and(max-width: 639px) {
+          right: 0;
+        }
         @include section1__text;
-        z-index: 4;
         position: relative;
-        bottom: 205px;
-        right: 70px;
+        top: 120px;
+        right: 50px;
         font-family: Parangon_530C;
         font-size: 40px;
         font-stretch: ultra-expanded;
@@ -539,11 +588,6 @@ html, body{
          
     }
   .section5__servicesWrapper{
-    @media screen and(max-width: 1224px) {
-      // flex-direction: column;
-      // align-items: center;
-      // top: 200px;
-    }
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -555,12 +599,10 @@ html, body{
     z-index: 4;
     .section5__item{
       @media screen and(max-width: 1224px) {
-      width: 300px;
-      height: 230px;
       margin: 10px;
       }
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 260px;
       padding: 80px 45px 30px 25px;
       background-size: cover;
       background-position: center, center;
@@ -608,6 +650,14 @@ html, body{
           .section5__linkText{
             border: 2px solid #00b9e7;
             padding: 10px 20px;
+            color: #fff;
+          }
+          .section5__linkText:hover{
+            border: 2px solid #fff;
+            background-color: #fff;
+            padding: 10px 20px;
+            color: #00b9e7;
+            font-weight: 600;
           }
         }
         .section5__btnLink:hover{
@@ -621,26 +671,17 @@ html, body{
     }
   }
   #item1{
-    @media screen and (max-width: 1224px){
-      width: 300;
-      height: 230px;
-    }
+
     background-image: url(../img/landing_page.png);
     }
    
     #item2{
-      @media screen and (max-width: 1224px){
-        width: 300;
-        height: 230px;
-      }
+ 
       background-image: url(../img/web__site.png);
       }
   
     #item3{
-      @media screen and (max-width: 1224px){
-        width: 300;
-        height: 230px;
-      }
+
     background-image: url(../img/e-shop.png);
     } 
 }
@@ -659,19 +700,11 @@ html, body{
   z-index: 2;
 }
 .section5__item:after {
-  @media screen and (max-width: 1224px){
-    max-width: 300px;
-    width: 100%;
-    height: 230px;
-  }
-  @media screen and(min-width: 1350px) {
-    min-width: 300px;
-    width: 100%;
-  }
+
   content: '';
   position: absolute;
-  width: 337px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -679,7 +712,13 @@ html, body{
   background: rgba($color: #473d55, $alpha: .7);
   z-index: 2;
 }
+
 .section6{
+  @media screen and(max-width: 991px) {
+    top: 300px;
+    background-size: 98%;
+    background-position: center 5%;
+  }
   position: relative;
   top: 550px;
   background-image: url(../img/beTheFirst.png);
@@ -689,6 +728,10 @@ html, body{
   flex-direction: row;
   flex-wrap: wrap;
   .section6__textSection{
+    @media screen and(max-width: 991px) {
+      text-justify: center;
+      align-items: center;
+    }
     display: flex;
     flex-direction: column;
     padding-top: 40px;
@@ -713,6 +756,9 @@ html, body{
 }
 
 .section7{
+  @media screen and(max-width: 991px) {
+    top: 400px;
+  }
   position: relative;
   top: 600px;
   .section7__top{
@@ -733,18 +779,33 @@ html, body{
     }
   }
   .section7__gallery{
+
     width: 100%;
     margin: 0;
     padding: 0;    
       .section7__topRow{
+        @media screen and (max-width: 991px){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         width: 100%;
         margin: 0;
         .section7__link{
+          @media screen and (max-width: 991px){
+            max-width: 991px;
+            width: 100%;
+          }
+          display: block;
           max-width: 700px;
           width: 100%;
           padding: 0;
           margin: 0;
           .section7__img{
+            @media screen and (max-width: 991px){
+              max-width: 991px;
+              width: 100%;
+            }
             max-width: 700px;
             width: 100%;
             max-height: 460px;
@@ -756,15 +817,30 @@ html, body{
       }
       
     .section7__bottomRow{
+      @media screen and (max-width: 991px){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       width: 100%;
       margin: 0;
       .section7__link{
+        @media screen and (max-width: 991px){
+            max-width: 450px;
+            width: 100%;
+          }
+        display: block;
         max-width: 420px;
         width: 100%;
         padding: 0;
         margin: 0;
         .section7__img{
-          max-width: 4200px;
+          @media screen and (max-width: 991px){
+            max-width: 450px;
+            width: 100%;
+          }
+          max-width: 420px;
           width: 100%;
           max-height: 340px;
           height: 100%;
