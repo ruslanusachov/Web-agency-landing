@@ -33,39 +33,81 @@ function executeGallery() {
         const galBtn = document.getElementsByClassName("section7__btn")[0];
         
         let overlay = document.getElementById('overlay');
-
-        let arrowLeft = document.getElementById('left-arow');
-
-        let bg = document.getElementsByClassName('gallery__image')[0];
-        
-        let arrowRight =document.getElementById('right-arrow');
-        
+                
         let closeOver = document.getElementById("close");
 
+        let image = document.getElementsByClassName('gallery__image')[0];
+    
+        let arrowLeft = document.getElementById('left-wrapper');
+
+        let arrowRight = document.getElementById('right-wrapper');
+
+        let initImgNumber = 1;
+
+        let maxImgNumber = 6;
+
+
+
         galBtn.onclick = function() {
-            
-            overlay.classList.add("section7__overlay");
-            closeOver.style.display = "block";
+            overlay.style.display = 'flex';
+            closeOver.style.display = "flex";
         }
 
         closeOver.onclick = function() {
-
-            overlay.classList.remove("section7__overlay");
+            overlay.style.display = 'none';
+            closeOver.style.display = 'none';
 
         }
 
         window.onclick = function(event) {
             if(event.target == overlay) {
-
-            overlay.classList.remove("section7__overlay");
+            
+                overlay.style.display = 'none';
 
             }
         }
 
-    if(overlay.contains("section7__overlay")) {
+        changePhoto();
 
-        closeOver.style.display = "none";
-    }
+        function changePhoto(){
+
+            arrowLeft.addEventListener('click', moveBackward);
+    
+            arrowRight.addEventListener('click', moveForward);
+    
+           function moveBackward() {
+    
+             initImgNumber--;
+
+             if(initImgNumber == 0) {
+
+                initImgNumber = maxImgNumber;
+             }
+
+             image.setAttribute('src', '../prjFiles/img/item' + initImgNumber + '.png');
+    
+           }
+    
+           function moveForward(){
+
+
+            initImgNumber++;
+
+            if(initImgNumber > maxImgNumber) {
+
+                initImgNumber = 1;
+
+            }
+
+            image.setAttribute('src', '../prjFiles/img/item' + initImgNumber + '.png');
+
+           }
+
+        }
+
+        /*------------------------------------------------------------------------------------------------------------*/
+    
+
 }
 
-/*--------------------------------------------------------------------------------*/
+
