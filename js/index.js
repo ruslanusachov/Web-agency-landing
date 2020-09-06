@@ -42,6 +42,8 @@ function executeGallery() {
 
         let arrowRight = document.getElementById('right-wrapper');
 
+        let imageLink = document.getElementsByClassName('section7__link');
+
         let initImgNumber = 1;
 
         let maxImgNumber = 6;
@@ -51,6 +53,16 @@ function executeGallery() {
         galBtn.onclick = function() {
             overlay.style.display = 'flex';
             closeOver.style.display = "flex";
+        }
+
+        for (let img of imageLink)  {
+
+            img.onclick = function() {
+
+                overlay.style.display = 'flex';
+                closeOver.style.display = "flex";
+
+            }
         }
 
         closeOver.onclick = function() {
