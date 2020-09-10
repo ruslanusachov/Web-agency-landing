@@ -122,6 +122,7 @@ function executeGallery() {
 
 }
 
+/*----------------------------------------------------------Animation ----------------------------------------------------------*/
 
 window.addEventListener('scroll', executeAnimation);
 executeAnimation();
@@ -154,8 +155,7 @@ function executeAnimation() {
     if(section8Position.top < windowPosition.bottom && section8Position.left < windowPosition.right && section8Position.bottom > windowPosition.top && section8Position.right > windowPosition.left) {
 
         animate();
-    }
-    
+    }   
     
 
     function animate(){
@@ -176,3 +176,6 @@ function executeAnimation() {
 
 
 };
+
+/*----------------------------------------------------------------------------------------------------------*/
+

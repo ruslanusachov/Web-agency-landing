@@ -1023,6 +1023,13 @@ body {
   align-items: center;
   color: #fff;
 }
+@media screen and (max-width: 991px) {
+  .section9 {
+    height: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
 .section9 .section9__heading {
   z-index: 2;
   font-size: 40px;
@@ -1091,6 +1098,13 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(71, 61, 85, 0.8);
+}
+@media screen and (max-width: 991px) {
+  .section9:after {
+    height: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
 }
 
 .section10 {
