@@ -130,7 +130,7 @@ executeAnimation();
 function executeAnimation() {
 
     let section8 = document.getElementsByClassName('section8__imgSection')[0];
-
+    let section10 = document.getElementsByClassName('section10')[0];
     
 
     let section8Position = {
@@ -142,6 +142,12 @@ function executeAnimation() {
         
     };
 
+    let section10Position = {
+        top: window.pageYOffset + section10.getBoundingClientRect().top,
+        left: window.pageXOffset + section10.getBoundingClientRect().left,
+        right: window.pageXOffset + section10.getBoundingClientRect().right,
+        bottom: window.pageYOffset + section10.getBoundingClientRect().bottom,
+    };
 
     let windowPosition = {
 
@@ -157,6 +163,11 @@ function executeAnimation() {
         animate();
     }   
     
+    if(section10Position.top < windowPosition.bottom && section10Position.left < windowPosition.right && section10Position.bottom > windowPosition.top && section10Position.right > windowPosition.left){
+
+        animate();
+
+    }
 
     function animate(){
 
@@ -166,11 +177,15 @@ function executeAnimation() {
 
         let macbook = document.getElementsByClassName('section8__macbook')[0];
 
+        let section10Img = document.getElementsByClassName('section10__img')[0];
+
         iphone.classList.toggle('section8__iphone-seen');
 
         ipad.classList.toggle('section8__ipad-seen');
 
         macbook.classList.toggle('section8__macbook-seen');
+
+        section10Img.classList.toggle('section10__img-seen');
 
     };
 

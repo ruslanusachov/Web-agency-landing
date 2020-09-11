@@ -1214,12 +1214,16 @@ body {
 }
 
 .section10 {
+  @media screen and(max-width: 991px){
+    top: 900px;
+  }
   position: relative;
   top: 800px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   .section10__textSection {
     background-image: url(../img/be-careful.png);
@@ -1254,11 +1258,25 @@ body {
   }
 
   .section10__img {
+    @media screen and(max-width: 520px) {
+      right: 0;
+     }
     display: flex;
     flex-direction: row;
     justify-content: center;
     max-width: 480px;
     width: 100%;
+    margin-right: 0;
+    position: relative;
+    right: -1000px;
+    transition: transform 0.7s ease-in;
+  }
+
+  .section10__img-seen{
+    @media screen and(max-width: 520px) {
+      transform: translateX(0%);
+       }
+    transform: translateX(-200%);
   }
 }
 
