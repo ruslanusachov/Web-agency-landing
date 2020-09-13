@@ -179,13 +179,13 @@ function executeAnimation() {
 
         let section10Img = document.getElementsByClassName('section10__img')[0];
 
-        iphone.classList.toggle('section8__iphone-seen');
+        iphone.classList.add('section8__iphone-seen');
 
-        ipad.classList.toggle('section8__ipad-seen');
+        ipad.classList.add('section8__ipad-seen');
 
-        macbook.classList.toggle('section8__macbook-seen');
+        macbook.classList.add('section8__macbook-seen');
 
-        section10Img.classList.toggle('section10__img-seen');
+        section10Img.classList.add('section10__img-seen');
 
     };
 
@@ -194,3 +194,56 @@ function executeAnimation() {
 
 /*----------------------------------------------------------------------------------------------------------*/
 
+/*----------------------------------------------Form validation----------------------------------------------*/
+validateForm();
+
+function validateForm(){
+
+    let inputs = document.querySelectorAll('input[data-rule]');
+
+    for(let input of inputs) {
+
+        input.addEventListener('blur', function validate(){
+
+            let rule = this.dataset.rule;
+
+            let value = this.value;
+
+            let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            let check;
+
+            switch(rule) {
+
+                case'firstName': 
+                check = ' ' &&  isNaN(value);
+                break;
+
+                case'lastName': 
+                check = ' ' &&  isNaN(value);
+                break;
+
+                case'email': 
+                check = ' ' && regex.test(value);
+                break;
+            }
+
+            this.classList.remove('invalid');
+            this.classList.remove('valid');
+
+            if(check) {
+            
+                this.classList.add('valid');
+
+            } else {
+
+                this.classList.add('invalid');
+
+            }
+
+        });
+
+    }
+
+    
+}

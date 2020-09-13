@@ -316,20 +316,26 @@
     </div>
     <div class="section11__formWrapper">
       <div class="section11__fromBlock">
-        <form action="#" method="POST">
+        <form action="#" method="POST" id="form">
           <table>
             <tr>
-              <td><input type="text" name="first name" class="input firstname" placeholder="Ваше имя"></td>
-              <td><input type="text" name="last name" class="input lastname" placeholder="Ваша фамилия"></td>
+              <td><input data-rule="firstName" type="text" name="first name" class="input firstname" placeholder="Ваше имя"></td>
+              <td><input data-rule="lastName" type="text" name="last name" class="input lastname" placeholder="Ваша фамилия"></td>
             </tr>
             <tr>
-              <td><input type="email" name="email" class="input email" placeholder="Email"></td>
+              <td><input data-rule="email" type="email" name="email" class="input email" placeholder="Email"></td>
             </tr>
             <tr>
-              <td><textarea name="message" id="" cols="30" rows="10" class="input message"
+              <td><textarea name="message" cols="30" rows="10" class="input message"
                   placeholder="Введите Ваше сообщение"></textarea></td>
             </tr>
           </table>
+          <div class="form__lower">
+            <span class="table__caption">Наши специалисты свяжутся с вами как можно скорее</span>
+            <button type="submit" class="form__btn">отправить</button>
+          </div>
+
+
         </form>
       </div>
 

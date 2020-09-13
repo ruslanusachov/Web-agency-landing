@@ -853,6 +853,7 @@ body {
   border-radius: 10px;
   background-color: #6a6b8e;
   border-color: #6a6b8e;
+  border: 0;
 }
 .section7 .section7__bottom .section7__btn .section7__btnText {
   color: #fff;
@@ -1183,7 +1184,6 @@ body {
   background-image: url(../img/footerbg.png);
   background-size: cover;
   background-position: center center;
-  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1216,6 +1216,11 @@ body {
 .section11 .section11__textSection .section11__textWrapper .section11__heading {
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1239px) {
+  .section11 .section11__textSection .section11__textWrapper .section11__heading {
+    margin-bottom: 0;
+  }
+}
 .section11 .section11__formWrapper {
   display: flex;
   flex-direction: column;
@@ -1235,6 +1240,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+    bottom: 30px;
   }
 }
 .section11 .section11__formWrapper .input::placeholder {
@@ -1245,9 +1252,9 @@ body {
   background: transparent;
   border: solid 2px #fff;
   margin-left: -3px;
+  color: #fff;
 }
 .section11 .section11__formWrapper .firstname {
-  color: #fff;
   width: 300px;
   height: 50px;
 }
@@ -1285,6 +1292,45 @@ body {
 @media screen and (max-width: 620px) {
   .section11 .section11__formWrapper .message {
     width: 300px;
+  }
+}
+.section11 .section11__formWrapper .valid {
+  border: 3px solid green;
+  z-index: 2;
+}
+.section11 .section11__formWrapper .invalid {
+  border: 3px solid red;
+  z-index: 2;
+}
+.section11 .section11__formWrapper .form__lower {
+  max-width: 620px;
+  width: 100%;
+}
+@media screen and (max-width: 620px) {
+  .section11 .section11__formWrapper .form__lower {
+    width: 300px;
+    position: relative;
+    bottom: 0;
+  }
+}
+.section11 .section11__formWrapper .form__lower .table__caption {
+  color: #fff;
+}
+.section11 .section11__formWrapper .form__lower .form__btn {
+  position: relative;
+  left: 70px;
+  top: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #f6ae48;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-weight: 600;
+  border: 0;
+}
+@media screen and (max-width: 1239px) {
+  .section11 .section11__formWrapper .form__lower .form__btn {
+    top: 0;
   }
 }
 
