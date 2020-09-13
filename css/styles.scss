@@ -1291,31 +1291,58 @@ body {
   background-size: cover;
   background-position: center center;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   .section11__textSection {
+    @media screen and(max-width: 1239px) {
+      max-width: 1239px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 2;
 
     .section11__textWrapper {
+
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       max-width: 330px;
       width: 100%;
       color: #fff;
+      .section11__heading {
+        margin-bottom: 40px;
+      }
     }
 
   }
 
   .section11__formWrapper {
+    @media screen and(max-width: 1239px) {
+      max-width: 1239px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 2;
+    max-width: 620px;
+    width: 100%;
 
     .input::placeholder {
       color: #fff;
@@ -1329,6 +1356,9 @@ body {
     }
 
     .firstname {
+      @media screen and(max-width: 620px){
+        width: 150px;
+      }
       color: #fff;
       width: 300px;
       height: 50px;
@@ -1336,19 +1366,29 @@ body {
     }
 
     .lastname {
-      width: 300px;
+      @media screen and(max-width: 620px){
+        width: 152px;
+        margin-left: -154px;
+      }
+      width: 298px;
       height: 50px;
       margin-left: -3px;
     }
 
     .email {
-      width: 202%;
+      @media screen and(max-width: 620px){
+        width: 300px;
+      }
+      width: 201%;
       margin-top: -4px;
       height: 50px;
     }
 
     .message {
-      width: 202%;
+      @media screen and(max-width: 620px){
+        width: 300px;
+      }
+      width: 201%;
       margin-top: -4px;
       height: 200px;
     }

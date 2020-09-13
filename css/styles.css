@@ -1184,13 +1184,26 @@ body {
   background-size: cover;
   background-position: center center;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .section11 .section11__textSection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 2;
+}
+@media screen and (max-width: 1239px) {
+  .section11 .section11__textSection {
+    max-width: 1239px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .section11 .section11__textSection .section11__textWrapper {
   display: flex;
@@ -1200,12 +1213,29 @@ body {
   width: 100%;
   color: #fff;
 }
+.section11 .section11__textSection .section11__textWrapper .section11__heading {
+  margin-bottom: 40px;
+}
 .section11 .section11__formWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 2;
+  max-width: 620px;
+  width: 100%;
+}
+@media screen and (max-width: 1239px) {
+  .section11 .section11__formWrapper {
+    max-width: 1239px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .section11 .section11__formWrapper .input::placeholder {
   color: #fff;
@@ -1221,20 +1251,41 @@ body {
   width: 300px;
   height: 50px;
 }
+@media screen and (max-width: 620px) {
+  .section11 .section11__formWrapper .firstname {
+    width: 150px;
+  }
+}
 .section11 .section11__formWrapper .lastname {
-  width: 300px;
+  width: 298px;
   height: 50px;
   margin-left: -3px;
 }
+@media screen and (max-width: 620px) {
+  .section11 .section11__formWrapper .lastname {
+    width: 152px;
+    margin-left: -154px;
+  }
+}
 .section11 .section11__formWrapper .email {
-  width: 202%;
+  width: 201%;
   margin-top: -4px;
   height: 50px;
 }
+@media screen and (max-width: 620px) {
+  .section11 .section11__formWrapper .email {
+    width: 300px;
+  }
+}
 .section11 .section11__formWrapper .message {
-  width: 202%;
+  width: 201%;
   margin-top: -4px;
   height: 200px;
+}
+@media screen and (max-width: 620px) {
+  .section11 .section11__formWrapper .message {
+    width: 300px;
+  }
 }
 
 .section11:after {
