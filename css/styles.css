@@ -1254,6 +1254,30 @@ body {
   margin-left: -3px;
   color: #fff;
 }
+.section11 .section11__formWrapper .form__label {
+  color: red;
+  max-width: 300px;
+  width: 100%;
+  display: none;
+}
+@media screen and (max-width: 620px) {
+  .section11 .section11__formWrapper .form__label {
+    width: 150px;
+  }
+}
+.section11 .section11__formWrapper .form__label#firstName {
+  position: relative;
+  top: 30px;
+}
+.section11 .section11__formWrapper .form__label#lastName {
+  position: relative;
+  top: 30px;
+}
+.section11 .section11__formWrapper .form__label#email {
+  position: relative;
+  top: 95px;
+  right: 160px;
+}
 .section11 .section11__formWrapper .firstname {
   width: 300px;
   height: 50px;
@@ -1264,7 +1288,7 @@ body {
   }
 }
 .section11 .section11__formWrapper .lastname {
-  width: 298px;
+  width: 297px;
   height: 50px;
   margin-left: -3px;
 }
@@ -1449,4 +1473,42 @@ body {
   font-size: 50px !important;
   font-weight: 600;
   cursor: pointer;
+}
+
+#toTop {
+  float: right;
+  position: fixed;
+  right: 10px;
+  top: 80%;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgba(133, 133, 133, 0.473);
+  cursor: pointer;
+  z-index: 20;
+}
+#toTop .toTop {
+  margin: 0;
+  position: relative;
+  display: block;
+  background-color: #f6ae48;
+  width: 28px;
+  height: 5px;
+  left: 2px;
+  top: 25px;
+  position: relative;
+  z-index: 21;
+  transform: rotate(131deg);
+}
+#toTop .toTop::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #f6ae48;
+  width: 28px;
+  height: 5px;
+  left: -11px;
+  top: -13px;
+  z-index: 21;
+  transform: rotate(-84deg);
 }

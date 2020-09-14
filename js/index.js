@@ -1,22 +1,58 @@
+/*------------------------Scrole-top button------------------------*/
+    scrollTop();
+
+    function scrollTop() {
+        let toTop = document.getElementById('toTop');
+        let start = {
+            top: 0,
+            behavior: 'smooth',
+        }
+        let sec1 = 600;
+
+        (window.onscroll = () => {
+
+            if(window.pageYOffset <= sec1){
+
+                toTop.style.display = 'none';
+            
+            }  else{
+    
+                toTop.style.display = 'block';
+            
+            };
+        
+        })();
+
+        toTop.addEventListener('click', scrollToTop);
+
+        function scrollToTop(e) {
+            
+            e.preventDefault;
+            window.scrollTo(start);
+        }
+    }
+/*----------------------------------------------------------------*/
+
+
 /*---------------Mobile navigation script---------------*/
 
 executeMobilenav();
 
-function executeMobilenav(){
+function executeMobilenav() {
 
-        const menuToggle = document.querySelector("#menu-toggle");
+    const menuToggle = document.querySelector("#menu-toggle");
 
-        const mobileNavContainer =  document.querySelector('#section2__mobile-nav');
+    const mobileNavContainer = document.querySelector('#section2__mobile-nav');
 
-        menuToggle.onclick = function(){ 
+    menuToggle.onclick = function () {
 
-            this.classList.toggle("menu-icon-active");
-            
-            mobileNavContainer.classList.toggle('section2__mobile-nav-active');
-            
-        }
+        this.classList.toggle("menu-icon-active");
+
+        mobileNavContainer.classList.toggle('section2__mobile-nav-active');
 
     }
+
+}
 /*---------------------------------------------------*/
 
 
@@ -30,82 +66,82 @@ executeGallery();
 
 function executeGallery() {
 
-        const galBtn = document.getElementsByClassName("section7__btn")[0];
-        
-        let overlay = document.getElementById('overlay');
-                
-        let closeOver = document.getElementById("close");
+    const galBtn = document.getElementsByClassName("section7__btn")[0];
 
-        let image = document.getElementsByClassName('gallery__image')[0];
-    
-        let arrowLeft = document.getElementById('left-wrapper');
+    let overlay = document.getElementById('overlay');
 
-        let arrowRight = document.getElementById('right-wrapper');
+    let closeOver = document.getElementById("close");
 
-        let imageLink = document.getElementsByClassName('section7__link');
+    let image = document.getElementsByClassName('gallery__image')[0];
 
-        let initImgNumber = 1;
+    let arrowLeft = document.getElementById('left-wrapper');
 
-        let maxImgNumber = 6;
+    let arrowRight = document.getElementById('right-wrapper');
+
+    let imageLink = document.getElementsByClassName('section7__link');
+
+    let initImgNumber = 1;
+
+    let maxImgNumber = 6;
 
 
 
-        galBtn.onclick = function() {
+    galBtn.onclick = function () {
+        overlay.style.display = 'flex';
+        closeOver.style.display = "flex";
+    }
+
+    for (let img of imageLink) {
+
+        img.onclick = function () {
+
             overlay.style.display = 'flex';
             closeOver.style.display = "flex";
+
         }
+    }
 
-        for (let img of imageLink)  {
+    closeOver.onclick = function () {
+        overlay.style.display = 'none';
+        closeOver.style.display = 'none';
 
-            img.onclick = function() {
+    }
 
-                overlay.style.display = 'flex';
-                closeOver.style.display = "flex";
+    window.onclick = function (event) {
+        if (event.target == overlay) {
 
-            }
-        }
-
-        closeOver.onclick = function() {
             overlay.style.display = 'none';
-            closeOver.style.display = 'none';
 
         }
+    }
 
-        window.onclick = function(event) {
-            if(event.target == overlay) {
-            
-                overlay.style.display = 'none';
+    changePhoto();
 
-            }
-        }
+    function changePhoto() {
 
-        changePhoto();
+        arrowLeft.addEventListener('click', moveBackward);
 
-        function changePhoto(){
+        arrowRight.addEventListener('click', moveForward);
 
-            arrowLeft.addEventListener('click', moveBackward);
-    
-            arrowRight.addEventListener('click', moveForward);
-    
-           function moveBackward() {
-    
-             initImgNumber--;
+        function moveBackward() {
 
-             if(initImgNumber == 0) {
+            initImgNumber--;
+
+            if (initImgNumber == 0) {
 
                 initImgNumber = maxImgNumber;
-             }
+            }
 
-             image.setAttribute('src', '../prjFiles/img/item' + initImgNumber + '.png');
-    
-           }
-    
-           function moveForward(){
+            image.setAttribute('src', '../prjFiles/img/item' + initImgNumber + '.png');
+
+        }
+
+        function moveForward() {
 
 
             initImgNumber++;
 
-            if(initImgNumber > maxImgNumber) {
+            if (initImgNumber > maxImgNumber) {
 
                 initImgNumber = 1;
 
@@ -113,12 +149,12 @@ function executeGallery() {
 
             image.setAttribute('src', '../prjFiles/img/item' + initImgNumber + '.png');
 
-           }
-
         }
 
-        /*------------------------------------------------------------------------------------------------------------*/
-    
+    }
+
+    /*------------------------------------------------------------------------------------------------------------*/
+
 
 }
 
@@ -131,7 +167,7 @@ function executeAnimation() {
 
     let section8 = document.getElementsByClassName('section8__imgSection')[0];
     let section10 = document.getElementsByClassName('section10')[0];
-    
+
 
     let section8Position = {
 
@@ -139,7 +175,7 @@ function executeAnimation() {
         left: window.pageXOffset + section8.getBoundingClientRect().left,
         right: window.pageXOffset + section8.getBoundingClientRect().right,
         bottom: window.pageYOffset + section8.getBoundingClientRect().bottom,
-        
+
     };
 
     let section10Position = {
@@ -158,18 +194,18 @@ function executeAnimation() {
     };
 
 
-    if(section8Position.top < windowPosition.bottom && section8Position.left < windowPosition.right && section8Position.bottom > windowPosition.top && section8Position.right > windowPosition.left) {
+    if (section8Position.top < windowPosition.bottom && section8Position.left < windowPosition.right && section8Position.bottom > windowPosition.top && section8Position.right > windowPosition.left) {
 
         animate();
-    }   
-    
-    if(section10Position.top < windowPosition.bottom && section10Position.left < windowPosition.right && section10Position.bottom > windowPosition.top && section10Position.right > windowPosition.left){
+    }
+
+    if (section10Position.top < windowPosition.bottom && section10Position.left < windowPosition.right && section10Position.bottom > windowPosition.top && section10Position.right > windowPosition.left) {
 
         animate();
 
     }
 
-    function animate(){
+    function animate() {
 
         let iphone = document.getElementsByClassName('section8__iphone')[0];
 
@@ -197,13 +233,14 @@ function executeAnimation() {
 /*----------------------------------------------Form validation----------------------------------------------*/
 validateForm();
 
-function validateForm(){
+function validateForm() {
 
     let inputs = document.querySelectorAll('input[data-rule]');
+    let labels = document.getElementsByClassName('form__label');
 
-    for(let input of inputs) {
+    for (let input of inputs) {
 
-        input.addEventListener('blur', function validate(){
+        input.addEventListener('blur', function validate() {
 
             let rule = this.dataset.rule;
 
@@ -213,26 +250,26 @@ function validateForm(){
 
             let check;
 
-            switch(rule) {
+            switch (rule) {
 
-                case'firstName': 
-                check = ' ' &&  isNaN(value);
-                break;
+                case 'firstName':
+                    check = ' ' && isNaN(value);
+                    break;
 
-                case'lastName': 
-                check = ' ' &&  isNaN(value);
-                break;
+                case 'lastName':
+                    check = ' ' && isNaN(value);
+                    break;
 
-                case'email': 
-                check = ' ' && regex.test(value);
-                break;
+                case 'email':
+                    check = ' ' && regex.test(value);
+                    break;
             }
 
             this.classList.remove('invalid');
             this.classList.remove('valid');
 
-            if(check) {
-            
+            if (check) {
+
                 this.classList.add('valid');
 
             } else {
@@ -241,9 +278,13 @@ function validateForm(){
 
             }
 
+
+
         });
+
 
     }
 
-    
+
+
 }

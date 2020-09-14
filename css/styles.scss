@@ -1359,7 +1359,34 @@ body {
       border: solid 2px #fff;
       margin-left: -3px;
       color: #fff;
+    }
 
+    .form__label{
+      @media screen and(max-width: 620px){
+        width: 150px;
+      }
+      color: red;
+      max-width: 300px;
+      width: 100%;
+      display: none;
+    }
+
+    .form__label#firstName{
+      position: relative;
+      top: 30px;
+      
+    }
+
+    .form__label#lastName{
+      position: relative;
+      top: 30px;
+      
+    }
+    .form__label#email{
+      position: relative;
+      top: 95px;
+      right: 160px;
+   
     }
 
     .firstname {
@@ -1376,7 +1403,7 @@ body {
         width: 152px;
         margin-left: -154px;
       }
-      width: 298px;
+      width: 297px;
       height: 50px;
       margin-left: -3px;
     }
@@ -1568,3 +1595,43 @@ body {
   }
 
 }
+
+#toTop{
+  float: right;
+  position: fixed;
+  right: 10px;
+  top: 80%;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgba(133, 133, 133, 0.473);
+  cursor: pointer;
+  z-index: 20;
+  .toTop{
+    margin: 0;
+    position: relative;
+    display: block;
+    background-color: #f6ae48;
+    width: 28px;
+    height: 5px;
+    left: 2px;
+    top: 25px;
+    position: relative;
+    z-index: 21;
+    transform: rotate(131deg);
+  }
+  .toTop::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #f6ae48;
+    width: 28px;
+    height: 5px;
+    left: -11px;
+    top: -13px;
+    z-index: 21;
+    transform: rotate(-84deg);
+
+  }
+}
+
