@@ -1248,6 +1248,7 @@ body {
   color: #fff;
 }
 .section11 .section11__formWrapper .input {
+  display: block;
   padding-left: 20px;
   background: transparent;
   border: solid 2px #fff;
@@ -1267,11 +1268,10 @@ body {
 }
 .section11 .section11__formWrapper .form__label#firstName {
   position: relative;
-  top: 30px;
 }
 .section11 .section11__formWrapper .form__label#lastName {
   position: relative;
-  top: 30px;
+  left: 300px;
 }
 .section11 .section11__formWrapper .form__label#email {
   position: relative;
@@ -1319,11 +1319,11 @@ body {
   }
 }
 .section11 .section11__formWrapper .valid {
-  border: 3px solid green;
+  border: 2px solid green;
   z-index: 2;
 }
 .section11 .section11__formWrapper .invalid {
-  border: 3px solid red;
+  border: 2px solid red;
   z-index: 2;
 }
 .section11 .section11__formWrapper .form__lower {

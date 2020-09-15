@@ -1354,6 +1354,7 @@ body {
     }
 
     .input {
+      display: block;
       padding-left: 20px;
       background: transparent;
       border: solid 2px #fff;
@@ -1373,13 +1374,13 @@ body {
 
     .form__label#firstName{
       position: relative;
-      top: 30px;
+      // top: 30px;
       
     }
 
     .form__label#lastName{
       position: relative;
-      top: 30px;
+      left: 300px;
       
     }
     .form__label#email{
@@ -1426,12 +1427,12 @@ body {
       height: 200px;
     }
     .valid{
-      border: 3px solid green;
+      border: 2px solid green;
       z-index: 2;
     }
 
     .invalid{
-      border: 3px solid red;
+      border: 2px solid red;
       z-index: 2;
 
     }

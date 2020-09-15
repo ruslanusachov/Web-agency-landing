@@ -1,36 +1,36 @@
 /*------------------------Scrole-top button------------------------*/
-    scrollTop();
+scrollTop();
 
-    function scrollTop() {
-        let toTop = document.getElementById('toTop');
-        let start = {
-            top: 0,
-            behavior: 'smooth',
-        }
-        let sec1 = 600;
-
-        (window.onscroll = () => {
-
-            if(window.pageYOffset <= sec1){
-
-                toTop.style.display = 'none';
-            
-            }  else{
-    
-                toTop.style.display = 'block';
-            
-            };
-        
-        })();
-
-        toTop.addEventListener('click', scrollToTop);
-
-        function scrollToTop(e) {
-            
-            e.preventDefault;
-            window.scrollTo(start);
-        }
+function scrollTop() {
+    let toTop = document.getElementById('toTop');
+    let start = {
+        top: 0,
+        behavior: 'smooth',
     }
+    let sec1 = 600;
+
+    (window.onscroll = () => {
+
+        if (window.pageYOffset <= sec1) {
+
+            toTop.style.display = 'none';
+
+        } else {
+
+            toTop.style.display = 'block';
+
+        };
+
+    })();
+
+    toTop.addEventListener('click', scrollToTop);
+
+    function scrollToTop(e) {
+
+        e.preventDefault;
+        window.scrollTo(start);
+    }
+}
 /*----------------------------------------------------------------*/
 
 
@@ -249,6 +249,7 @@ function validateForm() {
             let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
             let check;
+            let splitted = input.value.split('');
 
             switch (rule) {
 
@@ -278,13 +279,68 @@ function validateForm() {
 
             }
 
+            for (let label of labels) {
 
+                label.style.display = 'none';
+
+                if (input.value == NaN) {
+
+                    if (label['id'] === input['id']) {
+
+
+                        label.style.display = 'none';
+
+                    };
+
+                } else if (input.value.length == 0) {
+
+                    if (label['id'] === input['id']) {
+
+                        
+                        label.style.display = 'inline-block';
+
+                    };
+
+                } else if (!isNaN(input.value)) {
+
+                    if (label['id'] === input['id']) {
+
+
+                        label.style.display = 'inline-block';
+
+                    };
+
+                } for(let char of splitted) {
+
+                    if (label['id'] === input['id']) {
+
+
+                            if (!isNaN(char)) {
+
+                                label.style.display = 'inline-block';
+                                input.style.border = '2px solid red';
+
+
+                            } else {
+
+                                label.style.display = 'none';
+                                input.style.border = '2px solid green';
+
+                            }
+
+                            };
+
+                        }
+
+            }
 
         });
 
 
     }
 
-
-
 }
+
+/*---------------------------------------Smooth scroll---------------------------------------*/
+
+/*------------------------------------------------------------------------------------------*/
