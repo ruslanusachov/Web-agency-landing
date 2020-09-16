@@ -1354,7 +1354,7 @@ body {
 }
 @media screen and (max-width: 1239px) {
   .section11 .section11__formWrapper .form__lower .form__btn {
-    top: 0;
+    top: 10px;
   }
 }
 

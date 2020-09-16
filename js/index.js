@@ -1,5 +1,65 @@
-/*------------------------Scrole-top button------------------------*/
+/*---------------------------------function calls---------------------------------*/
+executeCounter();
 scrollTop();
+executeMobilenav();
+executeGallery();
+executeAnimation();
+validateForm();
+scrollToAnchor();
+
+
+
+/*-------------------------------------------------------------------------------*/
+
+
+/*---------------------------section1 counter---------------------------*/
+
+
+function executeCounter() {
+
+    const time = 3000; // time to execute function
+    const step = 5; // increase step 0+5+5+5...
+    
+    // let projects = document.getElementById('section1__projects');
+    // let clients = document.getElementById('section1__clients');
+
+    function outNum(num, elem) {  // num = number you need to get, elem, id of the element you need to output the function result into
+
+        let el = document.querySelector('#' + elem);  // universal getter of elems with id sign
+
+
+        let startDigit = 0; // iterated number starting from 0
+
+        let stepTime = Math.round( time / (num / step) );  // count the time you need for one step: 1) num / step = amount of steps you need 2) time / steps amount = spets amount during this time. Use Math.round() for possible decimals
+
+        let interval = setInterval(() => { // iterate function whithing every time interval
+
+            startDigit = startDigit + step; // increase start digit
+
+            if(startDigit >= num) { //limit the number to the one you input in function call
+
+                clearInterval(interval);
+                startDigit = num;
+            
+            }
+
+            el.innerHTML = startDigit; // write the number down in the element
+
+        }, 
+        stepTime);
+
+    }
+    
+    outNum( 518, 'section1__services'); // use your element id without # sign
+    outNum(345, 'section1__projects');
+    outNum(218, 'section1__clients');
+    
+
+
+}
+/*---------------------------------------------------------------------*/
+
+/*------------------------Scrole-top button------------------------*/
 
 function scrollTop() {
     let toTop = document.getElementById('toTop');
@@ -36,7 +96,6 @@ function scrollTop() {
 
 /*---------------Mobile navigation script---------------*/
 
-executeMobilenav();
 
 function executeMobilenav() {
 
@@ -62,7 +121,6 @@ function executeMobilenav() {
 
 /*-----------------Gallery script--------------------*/
 
-executeGallery();
 
 function executeGallery() {
 
@@ -161,7 +219,7 @@ function executeGallery() {
 /*----------------------------------------------------------Animation ----------------------------------------------------------*/
 
 window.addEventListener('scroll', executeAnimation);
-executeAnimation();
+
 
 function executeAnimation() {
 
@@ -231,7 +289,6 @@ function executeAnimation() {
 /*----------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------------Form validation----------------------------------------------*/
-validateForm();
 
 function validateForm() {
 
@@ -342,7 +399,6 @@ function validateForm() {
 }
 
 /*---------------------------------------Smooth scroll---------------------------------------*/
-    scrollToAnchor();
 
     function scrollToAnchor() {
         
