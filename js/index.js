@@ -342,5 +342,29 @@ function validateForm() {
 }
 
 /*---------------------------------------Smooth scroll---------------------------------------*/
+    scrollToAnchor();
 
+    function scrollToAnchor() {
+        
+        let anchors = document.querySelectorAll('a[href*="#"]');
+
+        for(let anchor of anchors) {
+
+            anchor.addEventListener('click', function(e){
+
+                e.preventDefault();
+
+                let blockId = anchor.getAttribute('href').substring(1);
+
+                let scroll = {
+                    behavior: 'smooth', 
+                    block: 'start',
+                }
+                
+                document.getElementById(blockId).scrollIntoView(scroll);
+
+            });
+
+        }
+    }
 /*------------------------------------------------------------------------------------------*/
